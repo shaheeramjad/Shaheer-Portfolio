@@ -58,6 +58,7 @@ const LeftBanner = () => {
             <a
               href="https://github.com/shaheeramjad"
               target="_blank"
+              rel="noreferrer"
               className="bannerIcon"
             >
               <FaGithub />
@@ -65,6 +66,7 @@ const LeftBanner = () => {
             <a
               href="https://leetcode.com/u/dev_shaheer/"
               target="_blank"
+              rel="noreferrer"
               className="bannerIcon"
             >
               <SiLeetcode />
@@ -72,6 +74,7 @@ const LeftBanner = () => {
             <a
               href="https://www.linkedin.com/in/shaheer-amjad-software-engineer/"
               target="_blank"
+              rel="noreferrer"
               className="bannerIcon"
             >
               <FaLinkedinIn />
