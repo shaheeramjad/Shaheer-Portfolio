@@ -1,22 +1,35 @@
-import React from 'react'
-import { FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa";
-import {logo} from "../../assets/index"
+import React from "react";
+import { FaGithub, FaLinkedinIn } from "react-icons/fa";
+import { SiLeetcode } from "react-icons/si";
+import { logo } from "../../assets/index";
 
 const Footer = () => {
   return (
     <div className="w-full py-20 h-auto border-b-[1px] border-b-black grid grid-cols-1 md:grid-cols-2 lgl:grid-cols-4 gap-8">
       <div className="w-full h-full flex flex-col gap-8">
-        <img className="w-32" src={logo} alt="logo" />
+        <h1 className="text-designColor text-3xl capitalize">Shaheer Amjad</h1>
         <div className="flex gap-4">
-          <span className="bannerIcon">
-            <FaFacebookF />
-          </span>
-          <span className="bannerIcon">
-            <FaTwitter />
-          </span>
-          <span className="bannerIcon">
+          <a
+            href="https://github.com/shaheeramjad"
+            target="_blank"
+            className="bannerIcon"
+          >
+            <FaGithub />
+          </a>
+          <a
+            href="https://leetcode.com/u/dev_shaheer/"
+            target="_blank"
+            className="bannerIcon"
+          >
+            <SiLeetcode />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/shaheer-amjad-software-engineer/"
+            target="_blank"
+            className="bannerIcon"
+          >
             <FaLinkedinIn />
-          </span>
+          </a>
         </div>
       </div>
       <div className="w-full h-full">
@@ -132,6 +145,6 @@ const Footer = () => {
       </div>
     </div>
   );
-}
+};
 
-export default Footer
+export default Footer;
