@@ -1,7 +1,7 @@
 import React from "react";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { SiLeetcode } from "react-icons/si";
-import { logo } from "../../assets/index";
+
 
 const Footer = () => {
   return (
