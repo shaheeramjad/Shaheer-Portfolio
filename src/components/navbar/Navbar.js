@@ -74,15 +74,30 @@ const Navbar = () => {
                   Find me in
                 </h2>
                 <div className="flex gap-4">
-                  <span className="bannerIcon">
-                    <FaFacebookF />
-                  </span>
-                  <span className="bannerIcon">
-                    <FaTwitter />
-                  </span>
-                  <span className="bannerIcon">
-                    <FaLinkedinIn />
-                  </span>
+                     <a
+            href="https://github.com/shaheeramjad"
+            target="_blank"
+            rel="noreferrer"
+            className="bannerIcon"
+          >
+            <FaGithub />
+          </a>
+          <a
+            href="https://leetcode.com/u/dev_shaheer/"
+            target="_blank"
+            rel="noreferrer"
+            className="bannerIcon"
+          >
+            <SiLeetcode />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/shaheer-amjad-software-engineer/"
+            target="_blank"
+            rel="noreferrer"
+            className="bannerIcon"
+          >
+            <FaLinkedinIn />
+          </a>
                 </div>
               </div>
               <span
