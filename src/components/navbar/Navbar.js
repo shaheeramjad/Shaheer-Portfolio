@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { Link } from "react-scroll";
 import { FiMenu } from "react-icons/fi";
 import { MdClose } from "react-icons/md";
-import { FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa";
+import { FaGithub, FaLinkedinIn } from "react-icons/fa";
+import { SiLeetcode } from "react-icons/si";
 import { navLinksdata } from "../../constants";
 
 const Navbar = () => {
@@ -42,9 +43,11 @@ const Navbar = () => {
             <div className="flex flex-col gap-8 py-2 relative">
               <div>
                 <p className="text-sm text-gray-400 mt-2">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Earum soluta perspiciatis molestias enim cum repellat, magnam
-                  exercitationem distinctio aliquid nam.
+                  👋 Greetings! I’m Shaheer Amjad, an experienced full-stack web
+          developer with 1.5+ years of experience creating beautiful and
+          functional digital solutions. I specialize in front-end and back-end
+          development, creating simple, functional and user-friendly websites,
+            web applications and softwares.
                 </p>
               </div>
               <ul className="flex flex-col gap-4">
@@ -72,15 +75,30 @@ const Navbar = () => {
                   Find me in
                 </h2>
                 <div className="flex gap-4">
-                  <span className="bannerIcon">
-                    <FaFacebookF />
-                  </span>
-                  <span className="bannerIcon">
-                    <FaTwitter />
-                  </span>
-                  <span className="bannerIcon">
-                    <FaLinkedinIn />
-                  </span>
+                     <a
+            href="https://github.com/shaheeramjad"
+            target="_blank"
+            rel="noreferrer"
+            className="bannerIcon"
+          >
+            <FaGithub />
+          </a>
+          <a
+            href="https://leetcode.com/u/dev_shaheer/"
+            target="_blank"
+            rel="noreferrer"
+            className="bannerIcon"
+          >
+            <SiLeetcode />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/shaheer-amjad-software-engineer/"
+            target="_blank"
+            rel="noreferrer"
+            className="bannerIcon"
+          >
+            <FaLinkedinIn />
+          </a>
                 </div>
               </div>
               <span

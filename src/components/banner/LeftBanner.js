@@ -46,8 +46,8 @@ const LeftBanner = () => {
           👋 Greetings! I’m Shaheer Amjad, an experienced full-stack web
           developer with 1.5+ years of experience creating beautiful and
           functional digital solutions. I specialize in front-end and back-end
-          development, creating simple, functional and user-friendly websites
-          and web applications and softwares.
+          development, creating simple, functional and user-friendly websites,
+            web applications and softwares.
         </p>
       </div>
       <div className="flex flex-col xl:flex-row gap-6 lgl:gap-0 justify-between">
