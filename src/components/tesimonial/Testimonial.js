@@ -75,7 +75,7 @@ const Testimonial = () => {
                 width: "12px",
                 height: "12px",
                 color: "blue",
-                background: "#03fb6e",
+                background: "#FEE715",
                 borderRadius: "50%",
                 cursor: "pointer",
               }
@@ -119,7 +119,7 @@ const Testimonial = () => {
                       Dr med Abdul Quddus Khokhar FRSA
                     </h3>
                     <p className="text-base tracking-wide text-gray-500">
-                      CEO | Member World Medical Association
+                      MBBS | Member World Medical Association
                     </p>
                   </div>
                 </div>

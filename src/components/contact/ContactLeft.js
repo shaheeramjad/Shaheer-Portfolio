@@ -1,7 +1,7 @@
 import React from "react";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { SiLeetcode } from "react-icons/si";
-import { bannerImg, contactImg } from "../../assets/index";
+import { bannerImg } from "../../assets/index";
 
 const ContactLeft = () => {
   return (
