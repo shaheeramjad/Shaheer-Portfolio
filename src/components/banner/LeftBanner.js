@@ -19,6 +19,7 @@ const LeftBanner = () => {
       "Software Engineer.",
       "Full Stack Developer.",
       "Problem Solver.",
+      "CS Enthusiast",
       "UI/UX Designer.",
     ],
     loop: true,
@@ -38,7 +39,7 @@ const LeftBanner = () => {
           <Cursor
             cursorBlinking="false"
             cursorStyle="|"
-            cursorColor="#03fb6e"
+            cursorColor="#FEE715"
           />
         </h2>
         <p className="text-base font-bodyFont leading-6 tracking-wide">
