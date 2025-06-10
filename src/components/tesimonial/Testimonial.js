@@ -75,7 +75,7 @@ const Testimonial = () => {
                 width: "12px",
                 height: "12px",
                 color: "blue",
-                background: "#FEE715",
+                background: "#3DC3C2",
                 borderRadius: "50%",
                 cursor: "pointer",
               }
