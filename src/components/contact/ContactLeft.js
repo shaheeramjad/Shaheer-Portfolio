@@ -17,7 +17,7 @@ const ContactLeft = () => {
           Software Engineer | Full Stack Developer
         </p>
         <p className="text-base text-gray-400 tracking-wide">
-          An experienced full-stack web developer with 2+ years of experience
+          An experienced full-stack web developer with 1.5+ years of experience
           creating beautiful and functional digital solutions.
         </p>
         <p className="text-base text-gray-400 flex items-center gap-2">
