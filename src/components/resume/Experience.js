@@ -21,11 +21,11 @@ const Experience = () => {
             title="Associate Software Engineer"
             subTitle="Maima Soft - (2024 - Present)"
             result="Lahore, Pakistan"
-            des="Promoting from intern to developer in just less than 1 year Its a proof of my skills. As a developer i helps customers to solve their problems and put imaginations into code."
+            des="Promoting from intern to associate software engineer in just less than 1 year Its a proof of my skills. As a developer i helps customers to solve their problems and put imaginations into code."
           />
           <ResumeCard
-            title="Software Engineer Intern"
-            subTitle="Maima Soft - (2022 - 2023)"
+            title="Intern Software Engineer"
+            subTitle="Maima Soft - (2023 - 2024)"
             result="Lahore, Pakistan"
             des="As an intern i worked on various projects with lead software engineers it helps me to gain hands on experience with industry experts."
           />

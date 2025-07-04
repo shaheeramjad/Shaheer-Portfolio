@@ -21,7 +21,7 @@ const Education = () => {
           <ResumeCard
             title="BSc in Computer Science"
             subTitle="University of Education, Lahore (2023 - 2027)"
-            result="3.10/4"
+            result="3.21/4"
             des="The University of Education provides Computer Science graduates with a solid foundation in both theoretical and practical aspects of technology."
           />
           <ResumeCard
@@ -49,20 +49,14 @@ const Education = () => {
         </div>
         <div className="mt-6 lgl:mt-14 w-full h-[1000px] border-l-[6px] border-l-black border-opacity-30 flex flex-col gap-10">
           <ResumeCard
-            title="Developer"
-            subTitle="Maima Soft - (2023 - Present)"
+            title="Associate Software Engineer"
+            subTitle="Maima Soft - (2024 - Present)"
             result="Lahore, Pakistan"
-            des="Promoting from intern to developer in just less than 1 year Its a proof of my skills. As a developer i helps customers to solve their problems and put imaginations into code."
+            des="Promoting from intern to associate software engineer in just less than 1 year Its a proof of my skills. As a developer i helps customers to solve their problems and put imaginations into code."
           />
           <ResumeCard
-            title="Freelancer"
-            subTitle="Fiverr, Upwork, etc - (2023 - Present)"
-            result="Remote"
-            des="Freelancing helps us to craft seamless user experiences from scratch on the behalf of ourself it also a mirror of our expertise."
-          />
-          <ResumeCard
-            title="Intern Developer"
-            subTitle="Maima Soft - (2022 - 2023)"
+            title="Intern Software Engineer"
+            subTitle="Maima Soft - (2023 - 2024)"
             result="Lahore, Pakistan"
             des="As an intern i worked on various projects with lead software engineers it helps me to gain hands on experience with industry experts."
           />
