@@ -6,38 +6,40 @@ const cors = require("cors");
 const app = express();
 const server = http.createServer(app);
 
-// Configure CORS for production
+// Configure CORS for production - more permissive
 const corsOptions = {
   origin: [
     "https://shaheerbyhisollabs.me",
-    "https://shaheerbyhisollabs.me/",
     "https://www.shaheerbyhisollabs.me",
-    "https://www.shaheerbyhisollabs.me/",
     "http://localhost:3000",
     "http://localhost:3001",
   ],
-  methods: ["GET", "POST"],
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization", "X-Requested-With"],
   credentials: true,
+  optionsSuccessStatus: 200,
 };
+
+// Apply CORS middleware before other middleware
+app.use(cors(corsOptions));
+
+// Handle preflight requests explicitly
+app.options("*", cors(corsOptions));
 
 const io = socketIo(server, {
   cors: {
     origin: [
       "https://shaheerbyhisollabs.me",
-      "https://shaheerbyhisollabs.me/",
       "https://www.shaheerbyhisollabs.me",
-      "https://www.shaheerbyhisollabs.me/",
       "http://localhost:3000",
       "http://localhost:3001",
     ],
     methods: ["GET", "POST"],
     credentials: true,
-    allowedHeaders: ["Content-Type"],
   },
+  allowEIO3: true,
   transports: ["websocket", "polling"],
 });
-
-app.use(cors(corsOptions));
 app.use(express.json());
 
 // Test endpoint for CORS verification
