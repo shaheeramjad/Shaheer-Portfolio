@@ -1,7 +1,7 @@
-import React from 'react'
+import React from "react";
 import { BsGithub } from "react-icons/bs";
 import { FaGlobe } from "react-icons/fa";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
 const ProjectsCard = ({ title, des, src, projectId }) => {
   const navigate = useNavigate();
@@ -24,17 +24,14 @@ const ProjectsCard = ({ title, des, src, projectId }) => {
               {title}
             </h3>
             <div className="flex gap-2">
-               <a
-              href="https://github.com/shaheeramjad"
-              target="_blank"
-              rel="noreferrer"
-              className="text-lg w-10 h-10 rounded-full bg-black inline-flex justify-center items-center text-gray-400 hover:text-designColor duration-300 cursor-pointer"
-            >
-              <BsGithub />
-            </a>
-              <span className="text-lg w-10 h-10 rounded-full bg-black inline-flex justify-center items-center text-gray-400 hover:text-designColor duration-300 cursor-pointer">
-                <FaGlobe />
-              </span>
+              <a
+                href="https://github.com/shaheeramjad"
+                target="_blank"
+                rel="noreferrer"
+                className="text-lg w-10 h-10 rounded-full bg-black inline-flex justify-center items-center text-gray-400 hover:text-designColor duration-300 cursor-pointer"
+              >
+                <BsGithub />
+              </a>
             </div>
           </div>
           <button
@@ -47,6 +44,6 @@ const ProjectsCard = ({ title, des, src, projectId }) => {
       </div>
     </div>
   );
-}
+};
 
-export default ProjectsCard
+export default ProjectsCard;

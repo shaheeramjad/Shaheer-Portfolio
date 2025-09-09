@@ -12,51 +12,47 @@ const Experience = () => {
       <div>
         <div className="py-6 lgl:py-12 font-titleFont flex flex-col gap-4">
           <p className="text-sm text-designColor tracking-[4px]">
-            2019 - Present
+            2023 - Present
           </p>
           <h2 className="text-3xl md:text-4xl font-bold">Job Experience</h2>
         </div>
         <div className="mt-6 lgl:mt-14 w-full h-[1000px] border-l-[6px] border-l-black border-opacity-30 flex flex-col gap-10">
           <ResumeCard
             title="Associate Software Engineer"
-            subTitle="Maima Soft - (2024 - Present)"
+            subTitle="Maima Soft - (Apr 2024 - Present)"
             result="Lahore, Pakistan"
-            des="Promoting from intern to associate software engineer in just less than 1 year Its a proof of my skills. As a developer i helps customers to solve their problems and put imaginations into code."
+            des={`• Spearheaded full-stack development of enterprise applications using React, .NET Core, and MS SQL Server, boosting client operational efficiency by 30%. <br />
+         • Optimized Entity Framework Core queries in ASP.NET Core, reducing API response times by 40%. <br />
+         • Delivered core business features including Distributor, Company, Stock, Sales, Expense, Ledger, and Custom Reporting modules. <br />
+         • Built a reusable PDF reporting tool with React-to-PDF, cutting generation time from 10 minutes to 30 seconds for 10k+ records. <br />`}
           />
+
           <ResumeCard
             title="Intern Software Engineer"
-            subTitle="Maima Soft - (2023 - 2024)"
+            subTitle="Maima Soft - (Jan 2024 - Mar 2024)"
             result="Lahore, Pakistan"
-            des="As an intern i worked on various projects with lead software engineers it helps me to gain hands on experience with industry experts."
+            des={`• Delivered 4 production-ready modules using React and ASP.NET Core, achieving 100% on-time delivery. <br />
+         • Improved UI/UX consistency by modernizing legacy codebases with Bootstrap 5, raising user satisfaction scores by 20%. <br />
+         • Resolved 15+ high-priority bugs, strengthening system stability and earning recognition from senior engineers.`}
           />
         </div>
       </div>
       <div>
         <div className="py-6 lgl:py-12 font-titleFont flex flex-col gap-4">
           <p className="text-sm text-designColor tracking-[4px]">
-            2023 - Present
+            2024 - Present
           </p>
-          <h2 className="text-3xl md:text-4xl font-bold">Trainer Experience</h2>
+          <h2 className="text-3xl md:text-4xl font-bold">
+            Community / Trainer Experience
+          </h2>
         </div>
         <div className="mt-6 lgl:mt-14 w-full h-[1000px] border-l-[6px] border-l-black border-opacity-30 flex flex-col gap-10">
           <ResumeCard
-            title="Trainer / Mentor"
+            title="Technical Trainer / Mentor"
             subTitle="Dev Weekends"
             result="Lahore"
             des="Help my mates and juniors to enhance their problem solving skills as well as development skills."
           />
-          {/* <ResumeCard
-            title="Web Developer and Instructor"
-            subTitle="SuperKing College (2010 - 2014)"
-            result="CANADA"
-            des="Higher education is tertiary education leading to award of an academic degree. Higher education, also called post-secondary education."
-          />
-          <ResumeCard
-            title="School Teacher"
-            subTitle="Kingstar Secondary School (2001 - 2010)"
-            result="NEVADA"
-            des="Secondary education or post-primary education covers two phases on the International Standard Classification of Education scale."
-          /> */}
         </div>
       </div>
     </motion.div>

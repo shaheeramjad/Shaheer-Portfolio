@@ -43,11 +43,17 @@ const Navbar = () => {
             <div className="flex flex-col gap-8 py-2 relative">
               <div>
                 <p className="text-sm text-gray-400 mt-2">
-                  👋 Greetings! I’m Shaheer Amjad, an experienced full-stack web
-          developer with 1.5+ years of experience creating beautiful and
-          functional digital solutions. I specialize in front-end and back-end
-          development, creating simple, functional and user-friendly websites,
-            web applications and softwares.
+                  Hi, I’m Shaheer Amjad, a passionate Software Engineer with
+                  hands-on experience in building scalable, user friendly, and
+                  high performance web applications. With expertise in both
+                  front-end and back-end development, I specialize in turning
+                  complex problems into simple, elegant digital solutions.
+                  <br />
+                  <br />I thrive in remote, collaborative environments, bringing
+                  strong problem solving skills, clean coding practices, and a
+                  focus on delivering impactful results. My goal is to
+                  contribute to innovative teams by building software that not
+                  only works but creates real value for users
                 </p>
               </div>
               <ul className="flex flex-col gap-4">
@@ -75,30 +81,30 @@ const Navbar = () => {
                   Find me in
                 </h2>
                 <div className="flex gap-4">
-                     <a
-            href="https://github.com/shaheeramjad"
-            target="_blank"
-            rel="noreferrer"
-            className="bannerIcon"
-          >
-            <FaGithub />
-          </a>
-          <a
-            href="https://leetcode.com/u/dev_shaheer/"
-            target="_blank"
-            rel="noreferrer"
-            className="bannerIcon"
-          >
-            <SiLeetcode />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/shaheer-amjad-software-engineer/"
-            target="_blank"
-            rel="noreferrer"
-            className="bannerIcon"
-          >
-            <FaLinkedinIn />
-          </a>
+                  <a
+                    href="https://github.com/shaheeramjad"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="bannerIcon"
+                  >
+                    <FaGithub />
+                  </a>
+                  <a
+                    href="https://leetcode.com/u/dev_shaheer/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="bannerIcon"
+                  >
+                    <SiLeetcode />
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/shaheer-amjad-software-engineer/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="bannerIcon"
+                  >
+                    <FaLinkedinIn />
+                  </a>
                 </div>
               </div>
               <span

@@ -10,6 +10,8 @@ import Projects from "./components/projects/Projects";
 import Resume from "./components/resume/Resume";
 import Testimonial from "./components/tesimonial/Testimonial";
 import CaseStudy from "./components/projects/CaseStudy";
+import SystemMonitor from "./components/monitoring/SystemMonitor";
+import AlgorithmVisualizer from "./components/algorithms/AlgorithmVisualizerNew";
 
 function App() {
   return (
@@ -25,6 +27,8 @@ function App() {
                   <Banner />
                   <Features />
                   <Projects />
+                  <SystemMonitor />
+                  <AlgorithmVisualizer />
                   <Resume />
                   <Testimonial />
                   <Contact />

@@ -1,6 +1,6 @@
-import React from 'react'
+import React from "react";
 
-const ResumeCard = ({title,subTitle,result,des}) => {
+const ResumeCard = ({ title, subTitle, result, des }) => {
   return (
     <div className="w-full h-1/3 group flex">
       <div className="w-10 h-[6px] bgOpacity mt-16 relative">
@@ -24,12 +24,13 @@ const ResumeCard = ({title,subTitle,result,des}) => {
             </p>
           </div>
         </div>
-        <p className="text-sm md:text-base font-medium text-gray-400 group-hover:text-gray-300 duration-300">
-          {des}
-        </p>
+        <p
+          className="text-sm md:text-base font-medium text-gray-400 group-hover:text-gray-300 duration-300"
+          dangerouslySetInnerHTML={{ __html: des }}
+        />
       </div>
     </div>
   );
-}
+};
 
-export default ResumeCard
+export default ResumeCard;

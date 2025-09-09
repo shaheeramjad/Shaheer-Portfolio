@@ -11,35 +11,35 @@ const Features = () => {
       id="features"
       className="w-full py-20 border-b-[1px] border-b-black"
     >
-      <Title title="Features" des="What I Do" />
+      <Title title="Features" des="What I Work On" />
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 xl:gap-20">
         <Card
-          title="Business Stratagy"
-          des="Boost a business by automating processes, creating custom software solutions, and enhancing user experiences."
+          title="Problem Solving"
+          des="I enjoy solving challenging problems by writing clean, efficient, and scalable code."
         />
         <Card
-          title="Web Development"
-          des="Creating innovative solutions for best user experiences in form of web applications."
+          title="Full-Stack Development"
+          des="Building responsive, secure, and maintainable web applications using modern frameworks and technologies."
           icon={<AiFillAppstore />}
         />
         <Card
-          title="SEO Optimisation"
-          des="Optimize your websites according to SEO standards that helps you to reach more customers."
+          title="Performance & Optimization"
+          des="Improving application speed, database queries, and user experience by optimizing code and architecture."
           icon={<SiProgress />}
         />
         <Card
-          title="Custom Software"
-          des="Creating custom softwares for your business to boost it and easy management."
+          title="Custom Software Solutions"
+          des="Designing and developing tailored software that meets specific business needs and scales with growth."
           icon={<FaLaptop />}
         />
         <Card
-          title="UI/UX Design"
-          des="Having experience related user interface which helps to create seamless user experiences."
+          title="UI/UX Implementation"
+          des="Translating designs into smooth and accessible interfaces, ensuring great user experiences."
           icon={<SiAntdesign />}
         />
         <Card
-          title="Hosting Websites"
-          des="Help to host your projects on cloud or local servers to enhance their visibility and performance."
+          title="Deployment & Hosting"
+          des="Deploying applications on cloud platforms (AWS, Vercel, Render) and managing environments effectively."
           icon={<FaGlobe />}
         />
       </div>

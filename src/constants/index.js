@@ -14,18 +14,28 @@ export const navLinksdata = [
     title: "Projects",
     link: "projects",
   },
+  // {
+  //   _id: 1004,
+  //   title: "System Monitor",
+  //   link: "systemmonitor",
+  // },
+  // {
+  //   _id: 1005,
+  //   title: "Algorithm Visualizer",
+  //   link: "algorithmvisualizer",
+  // },
   {
-    _id: 1004,
+    _id: 1006,
     title: "Resume",
     link: "resume",
   },
   {
-    _id: 1005,
+    _id: 1007,
     title: "Testimonial",
     link: "testimonial",
   },
   {
-    _id: 1006,
+    _id: 1008,
     title: "Contact",
     link: "contact",
   },
