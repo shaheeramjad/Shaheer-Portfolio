@@ -10,7 +10,12 @@ const server = http.createServer(app);
 const corsOptions = {
   origin:
     process.env.NODE_ENV === "production"
-      ? ["https://shaheerbyhisollabs.me/"]
+      ? [
+          "https://shaheerbyhisollabs.me",
+          "https://shaheerbyhisollabs.me/",
+          "https://www.shaheerbyhisollabs.me",
+          "https://www.shaheerbyhisollabs.me/",
+        ]
       : ["http://localhost:3000", "http://localhost:3001"],
   methods: ["GET", "POST"],
   credentials: true,
