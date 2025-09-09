@@ -8,26 +8,51 @@ const server = http.createServer(app);
 
 // Configure CORS for production
 const corsOptions = {
-  origin:
-    process.env.NODE_ENV === "production"
-      ? [
-          "https://shaheerbyhisollabs.me",
-          "https://shaheerbyhisollabs.me/",
-          "https://www.shaheerbyhisollabs.me",
-          "https://www.shaheerbyhisollabs.me/",
-        ]
-      : ["http://localhost:3000", "http://localhost:3001"],
+  origin: [
+    "https://shaheerbyhisollabs.me",
+    "https://shaheerbyhisollabs.me/",
+    "https://www.shaheerbyhisollabs.me",
+    "https://www.shaheerbyhisollabs.me/",
+    "http://localhost:3000",
+    "http://localhost:3001",
+  ],
   methods: ["GET", "POST"],
   credentials: true,
 };
 
 const io = socketIo(server, {
-  cors: corsOptions,
+  cors: {
+    origin: [
+      "https://shaheerbyhisollabs.me",
+      "https://shaheerbyhisollabs.me/",
+      "https://www.shaheerbyhisollabs.me",
+      "https://www.shaheerbyhisollabs.me/",
+      "http://localhost:3000",
+      "http://localhost:3001",
+    ],
+    methods: ["GET", "POST"],
+    credentials: true,
+    allowedHeaders: ["Content-Type"],
+  },
   transports: ["websocket", "polling"],
 });
 
 app.use(cors(corsOptions));
 app.use(express.json());
+
+// Test endpoint for CORS verification
+app.get("/api/test", (req, res) => {
+  res.json({
+    message: "CORS is working!",
+    timestamp: Date.now(),
+    origin: req.headers.origin,
+  });
+});
+
+// Health check endpoint
+app.get("/health", (req, res) => {
+  res.json({ status: "OK", timestamp: Date.now() });
+});
 
 // Simulation data generators
 const generateCPUUsage = () => Math.floor(Math.random() * 71) + 20; // 20-90%
