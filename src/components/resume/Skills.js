@@ -15,7 +15,7 @@ const Skills = () => {
           </p>
           <h2 className="text-3xl md:text-4xl font-bold">Soft Skills</h2>
         </div>
-        <div className="mt-14 w-full flex flex-col gap-6">
+        <div className=" flex flex-col gap-6">
           <div className="overflow-x-hidden">
             <p className="text-sm uppercase font-medium">Ever Learner</p>
             <span className="w-full h-2 bgOpacity rounded-md inline-flex mt-2">
