@@ -5,6 +5,7 @@ import { FiArrowLeft, FiArrowUpRight, FiMenu, FiMoon, FiSun, FiX } from "react-i
 import { SiLeetcode } from "react-icons/si";
 import { project9, projectSeven, projectOne } from "./assets";
 import { articles } from "./content/articles";
+import { AnalyticsTracker } from "./analytics";
 
 const links = [
   ["Work", "work"],
@@ -144,7 +145,7 @@ function Header() {
             {name}
           </a>
         ))}
-        <a className="nav-cta" href="/Shaheer-Amjad-Resume.pdf" download>
+        <a className="nav-cta" href="/Shaheer-Amjad-Resume.pdf" download data-analytics-event="portfolio_resume_downloaded" data-analytics-label="header">
           Resume <FiArrowUpRight />
         </a>
       </nav>
@@ -189,11 +190,11 @@ function Footer() {
 
 function ArticleCard({ article, index }) {
   const articleLink = article.externalUrl ? (
-    <a href={article.externalUrl} target="_blank" rel="noreferrer">
+    <a href={article.externalUrl} target="_blank" rel="noreferrer" data-analytics-event="portfolio_article_opened" data-analytics-label={article.title}>
       Read article <FiArrowUpRight />
     </a>
   ) : (
-    <Link to={`/articles/${article.slug}`}>Read article <FiArrowUpRight /></Link>
+    <Link to={`/articles/${article.slug}`} data-analytics-event="portfolio_article_opened" data-analytics-label={article.title}>Read article <FiArrowUpRight /></Link>
   );
 
   return (
@@ -214,7 +215,7 @@ function Home() {
     <div id="top">
       <Header />
       <main id="main-content">
-        <section className="hero">
+        <section className="hero" data-track-section="hero">
           <div className="hero-main">
             <p className="availability">
               <span /> Open to remote startup roles
@@ -230,13 +231,13 @@ function Home() {
               them while taking ownership from problem to production.
             </p>
             <div className="hero-actions">
-              <a className="button primary" href="#work">
+              <a className="button primary" href="#work" data-analytics-event="portfolio_cta_clicked" data-analytics-label="see_selected_work">
                 See selected work <FaArrowRight />
               </a>
-              <a className="button secondary" href="mailto:stansari4500@gmail.com">
+              <a className="button secondary" href="mailto:stansari4500@gmail.com" data-analytics-event="portfolio_contact_clicked" data-analytics-label="hero_email">
                 Email me
               </a>
-              <a className="text-link" href="/Shaheer-Amjad-Resume.pdf" download>
+              <a className="text-link" href="/Shaheer-Amjad-Resume.pdf" download data-analytics-event="portfolio_resume_downloaded" data-analytics-label="hero">
                 Download resume <FiArrowUpRight />
               </a>
             </div>
@@ -256,22 +257,22 @@ function Home() {
                 <strong>Product-minded startup teams</strong>
               </div>
               <div className="socials">
-                <a href="https://github.com/shaheeramjad" target="_blank" rel="noreferrer" aria-label="GitHub"><FaGithub /></a>
-                <a href="https://www.linkedin.com/in/shaheer-amjad-software-engineer/" target="_blank" rel="noreferrer" aria-label="LinkedIn"><FaLinkedinIn /></a>
-                <a href="https://leetcode.com/u/dev_shaheer/" target="_blank" rel="noreferrer" aria-label="LeetCode"><SiLeetcode /></a>
+                <a href="https://github.com/shaheeramjad" target="_blank" rel="noreferrer" aria-label="GitHub" data-analytics-event="portfolio_social_clicked" data-analytics-label="github"><FaGithub /></a>
+                <a href="https://www.linkedin.com/in/shaheer-amjad-software-engineer/" target="_blank" rel="noreferrer" aria-label="LinkedIn" data-analytics-event="portfolio_social_clicked" data-analytics-label="linkedin"><FaLinkedinIn /></a>
+                <a href="https://leetcode.com/u/dev_shaheer/" target="_blank" rel="noreferrer" aria-label="LeetCode" data-analytics-event="portfolio_social_clicked" data-analytics-label="leetcode"><SiLeetcode /></a>
               </div>
             </div>
           </aside>
         </section>
 
-        <section className="metrics" aria-label="Highlights">
+        <section className="metrics" aria-label="Highlights" data-track-section="highlights">
           <div><strong>40%</strong><span>faster API responses</span></div>
           <div><strong>10k+</strong><span>records in generated reports</span></div>
           <div><strong>15+</strong><span>high-priority bugs resolved</span></div>
           <div><strong>#64</strong><span>ICPC Pakistan prelims</span></div>
         </section>
 
-        <section id="work" className="section">
+        <section id="work" className="section" data-track-section="selected_work">
           <SectionTitle
             eyebrow="01 / Selected work"
             title="Business problems, shipped."
@@ -280,7 +281,7 @@ function Home() {
           <div className="project-list">
             {projects.map((project, i) => (
               <article className="project" key={project.name}>
-                <a className="project-image" href={project.href} target="_blank" rel="noreferrer">
+                <a className="project-image" href={project.href} target="_blank" rel="noreferrer" data-analytics-event="portfolio_project_opened" data-analytics-label={project.name}>
                   <img src={project.image} alt={`${project.name} interface`} />
                   <span>0{i + 1}</span>
                 </a>
@@ -301,7 +302,7 @@ function Home() {
                   <ul>{project.stack.map((item) => <li key={item}>{item}</li>)}</ul>
                   <div className="project-footer">
                     <span>{project.impact}</span>
-                    <a href={project.href} target="_blank" rel="noreferrer">
+                    <a href={project.href} target="_blank" rel="noreferrer" data-analytics-event="portfolio_project_opened" data-analytics-label={project.name}>
                       View product <FiArrowUpRight />
                     </a>
                   </div>
@@ -311,7 +312,7 @@ function Home() {
           </div>
         </section>
 
-        <section className="principles" aria-label="How I work">
+        <section className="principles" aria-label="How I work" data-track-section="how_i_work">
           <p className="eyebrow">How I work</p>
           <div>
             <article>
@@ -332,7 +333,7 @@ function Home() {
           </div>
         </section>
 
-        <section id="experience" className="section two-column">
+        <section id="experience" className="section two-column" data-track-section="experience">
           <SectionTitle
             eyebrow="02 / Experience"
             title="Ownership over hand-offs."
@@ -357,7 +358,7 @@ function Home() {
           </div>
         </section>
 
-        <section id="open-source" className="section open-source-section">
+        <section id="open-source" className="section open-source-section" data-track-section="open_source">
           <SectionTitle
             eyebrow="03 / Open source"
             title="Contributing beyond my own codebase."
@@ -371,7 +372,7 @@ function Home() {
                     <p>{item.role}</p>
                     <h3>{item.project}</h3>
                   </div>
-                  <a href={item.href} target="_blank" rel="noreferrer" aria-label={`View ${item.project} on GitHub`}>
+                  <a href={item.href} target="_blank" rel="noreferrer" aria-label={`View ${item.project} on GitHub`} data-analytics-event="portfolio_open_source_opened" data-analytics-label={item.project}>
                     <FaGithub />
                   </a>
                 </div>
@@ -381,7 +382,7 @@ function Home() {
                     <li key={contribution}>{contribution}</li>
                   ))}
                 </ul>
-                <a className="oss-link" href={item.href} target="_blank" rel="noreferrer">
+                <a className="oss-link" href={item.href} target="_blank" rel="noreferrer" data-analytics-event="portfolio_open_source_opened" data-analytics-label={item.project}>
                   View project <FiArrowUpRight />
                 </a>
               </article>
@@ -389,7 +390,7 @@ function Home() {
           </div>
         </section>
 
-        <section id="stack" className="section stack-section">
+        <section id="stack" className="section stack-section" data-track-section="stack">
           <SectionTitle
             eyebrow="04 / Toolkit"
             title="Modern tools, pragmatic choices."
@@ -405,7 +406,7 @@ function Home() {
           </div>
         </section>
 
-        <section id="writing" className="section">
+        <section id="writing" className="section" data-track-section="writing">
           <SectionTitle
             eyebrow="05 / Writing"
             title="Latest articles."
@@ -417,11 +418,11 @@ function Home() {
           <Link className="all-articles-link" to="/articles">Browse all articles <FaArrowRight /></Link>
         </section>
 
-        <section id="contact" className="contact">
+        <section id="contact" className="contact" data-track-section="contact">
           <p className="eyebrow">Have a role or product in mind?</p>
           <h2>Let’s build something people rely on.</h2>
           <p>I’m open to remote software engineering roles with ambitious, thoughtful startup teams.</p>
-          <a className="button light" href="mailto:stansari4500@gmail.com">
+          <a className="button light" href="mailto:stansari4500@gmail.com" data-analytics-event="portfolio_contact_clicked" data-analytics-label="contact_section">
             Start a conversation <FiArrowUpRight />
           </a>
         </section>
@@ -435,7 +436,7 @@ function ArticlesPage() {
   return (
     <div>
       <Header />
-      <main id="main-content" className="articles-page">
+      <main id="main-content" className="articles-page" data-track-section="articles_index">
         <Link className="back-link" to="/"><FiArrowLeft /> Back to portfolio</Link>
         <SectionTitle
           eyebrow="Writing"
@@ -474,7 +475,7 @@ function ArticlePage() {
       <Header />
       <main id="main-content" className="article-page">
         <Link className="back-link" to="/articles"><FiArrowLeft /> All articles</Link>
-        <header className="article-header">
+        <header className="article-header" data-track-section="article_header">
           <p className="eyebrow">{article.category}</p>
           <h1>{article.title}</h1>
           <p className="article-deck">{article.description}</p>
@@ -484,7 +485,7 @@ function ArticlePage() {
             <span>{article.readingTime}</span>
           </div>
         </header>
-        <article className="article-content">
+        <article className="article-content" data-track-section="article_content">
           <p className="article-intro">{article.intro}</p>
           {article.sections.map((section) => (
             <section key={section.heading || section.callout}>
@@ -539,6 +540,7 @@ function ArticlePage() {
 function App() {
   return (
     <BrowserRouter>
+      <AnalyticsTracker />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/articles" element={<ArticlesPage />} />
