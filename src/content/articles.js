@@ -1,5 +1,94 @@
 export const articles = [
   {
+    slug: "think-like-an-engineer",
+    category: "Engineering mindset",
+    title: "Think Like an Engineer, Not Just a Programmer",
+    description:
+      "The mindset shift from collecting technologies to understanding systems, evaluating trade-offs, and solving unfamiliar problems.",
+    published: "August 2, 2026",
+    readingTime: "5 min read",
+    intro:
+      "When I started learning software engineering, I believed success came from knowing more technologies. I spent countless hours learning frameworks, databases, cloud services, and design patterns. Every time a new tool became popular, I felt like I had to learn it immediately.",
+    sections: [
+      {
+        paragraphs: [
+          "Over time, I noticed something interesting.",
+          "The engineers I admired most were not necessarily the ones who knew every framework. They were the ones who stayed calm when they faced unfamiliar problems. They asked better questions. They broke problems into smaller pieces. Most importantly, they understood why something worked instead of simply knowing that it did.",
+          "That completely changed how I approach learning.",
+        ],
+      },
+      {
+        heading: "The Difference Between Knowing and Understanding",
+        paragraphs: [
+          "There is a huge difference between following a tutorial and understanding the reasoning behind it.",
+          "For example, most developers know that caching improves application performance. But fewer people stop to ask why it works, when it should be used, and what new problems it might introduce.",
+          "The moment you understand the reasoning behind a solution, you stop depending on memorization.",
+          "Instead of remembering answers, you start building the ability to discover them.",
+          "That is a skill that remains valuable no matter which technology becomes popular next.",
+        ],
+      },
+      {
+        heading: "Everything in Software Is Connected",
+        paragraphs: [
+          "One lesson that changed the way I think is that software systems are never isolated.",
+          "A small change in one service can affect databases, APIs, monitoring, memory usage, deployment pipelines, and even the experience of end users.",
+          "Something as simple as introducing a cache can improve response times while also creating stale data, increasing memory usage, and making debugging more difficult.",
+          "Every decision has consequences.",
+          "Good engineers think beyond the first result and consider what might happen next.",
+        ],
+      },
+      {
+        heading: "Don't Celebrate Metrics Too Quickly",
+        paragraphs: [
+          "Imagine deploying a new feature and seeing CPU usage drop by 30 percent.",
+          "At first glance, it sounds like a success.",
+          "But what if requests are failing before they reach your application? What if users are seeing errors instead of responses?",
+          "Metrics without context can be misleading. Before celebrating improvements, I think it is important to ask a simple question.",
+        ],
+        callout:
+          "What evidence proves that users are actually having a better experience?",
+        after:
+          "Numbers become meaningful only when they tell the complete story.",
+      },
+      {
+        heading: "Ask Better Questions",
+        paragraphs: [
+          "Whenever I get stuck on a technical problem, I try to avoid jumping directly into solutions.",
+          "Instead, I ask myself questions like these.",
+        ],
+        bullets: [
+          "What problem am I actually trying to solve?",
+          "What assumptions am I making?",
+          "What evidence supports my conclusion?",
+          "What could happen if this change fails?",
+          "How will this affect other parts of the system?",
+        ],
+        after:
+          "These questions often lead to better solutions than immediately searching for another code snippet.",
+      },
+      {
+        heading: "Technology Will Change. Thinking Will Not.",
+        paragraphs: [
+          "Programming languages evolve. Frameworks come and go. New tools appear every year.",
+          "The ability to think clearly is what stays relevant. Companies are not only hiring people who can write code.",
+          "They are looking for engineers who can understand systems, evaluate trade-offs, solve unfamiliar problems, and make thoughtful decisions.",
+          "That is the kind of engineer I want to become.",
+          "Every project I build reminds me that learning another framework is useful, but learning how to think is what creates long-term value.",
+        ],
+      },
+      {
+        heading: "Final Thoughts",
+        paragraphs: [
+          "One of the biggest mindset shifts in my software engineering journey has been realizing that coding is only part of the job.",
+          "Engineering is about understanding problems deeply enough to design reliable solutions.",
+          "The more I learn, the more I believe that great engineers are not defined by the number of technologies on their résumé. They are defined by the quality of their thinking.",
+        ],
+        callout:
+          "What mindset has made the biggest difference in your engineering journey? I would love to hear your perspective",
+      },
+    ],
+  },
+  {
     slug: "event-driven-microservices-kubernetes",
     category: "Architecture",
     title: "Building event-driven microservices with Kubernetes",
